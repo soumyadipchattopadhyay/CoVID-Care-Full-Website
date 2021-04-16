@@ -1,0 +1,424 @@
+
+iframe{
+	margin-top : 10px;
+	 overflow: scroll;
+    overflow-y: hidden;
+}
+body
+{
+	padding:0px;
+	margin:0px;
+	font-family: Arial, Helvetica, 'Siyam Rupali', sans-serif;
+	
+	
+}
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+h1 {
+  text-shadow: 5px 5px rgba(0,0,0,0.2);
+}
+h2 {
+	
+  float: right;
+  margin-right: 30%;
+  text-shadow: 5px 5px rgba(0,0,0,0.2);
+}
+
+h3 {
+  text-shadow: 5px 5px rgba(0,0,0,0.2);
+}
+
+h5
+{
+	font-family:'Siyam Rupali', sans-serif;
+}
+
+@font-face {
+  font-family: 'Siyam Rupali';
+  src: url('fonts/SiyamRupali.eot?version=1.070');
+  src: local('Siyam Rupali'), url('fonts/SiyamRupali.woff?version=1.070') format('woff'),       url('fonts/SiyamRupali.ttf?version=1.070') format('truetype');
+  font-style: normal;
+  unicode-range: U+0980-09FF; //Bangla Range (source: http://www.unicode.org/charts/PDF/U0980.pdf‎‎)
+}
+
+h6 {
+  margin:0px;
+  width: auto;
+  size: auto;
+}
+
+
+img {
+  width: 100%;
+  height: auto;
+  
+}
+
+.card {
+  
+  height: 100%;
+  width: 50%;
+   border-radius: 25px;
+  display: felx;
+  background-color: #c6e0f5;
+  position: relative;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+   z-index: 1;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+	bottom: 0px;
+	 background-color: #ffffff ;
+	padding: 2px 16px;
+	border-radius: 25px;
+}
+
+.topnav {
+  background-color: #333;
+  /*overflow: hidden*/
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index:2;
+  transition: top 0.3s;
+}
+
+
+
+/* Style the links inside the navigation bar */
+.topnav a {
+	
+	display:inline-block;
+	color: #f2f2f2;
+	margin-right: 15px;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+}
+
+.topnav li{
+    display:inline;
+}
+
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+
+.column {
+  float: left;
+  width: 33.3333%;
+  padding: 0 0px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.kk{
+	background-color: #c6e0f5;
+}
+
+
+.containerl {
+  position: relative;
+}
+
+.topright {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+
+
+.bot {
+	float: right;
+	background-color: #eebfa4;
+	width: auto;
+	height: auto;
+	margin: 50px;
+    bottom: 0px;
+	z-index: 9999999999999;
+}
+
+
+
+.button {
+  border-radius: 4px;
+  background-color: #FF8C00;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  width: 100%;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-top: -10px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/*added later */
+/*jssor slider loading skin spin css*/
+        .jssorl-009-spin img {
+            animation-name: jssorl-009-spin;
+            animation-duration: 1.6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes jssorl-009-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .jssora061 {display:block;position:absolute;cursor:pointer;}
+        .jssora061 .a {fill:none;stroke:#fff;stroke-width:360;stroke-linecap:round;}
+        .jssora061:hover {opacity:.8;}
+        .jssora061.jssora061dn {opacity:.5;}
+        .jssora061.jssora061ds {opacity:.3;pointer-events:none;}
+		
+		
+		
+
+
+
+.float{
+	position:fixed;
+	width:50px;
+	height:50px;
+	bottom:20px;
+	right:20px;
+	background-color:#0C9;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #333;
+	z-index: 999999999999999999999999999999999999999999999999999999999999999999999999999999;
+}
+
+.my-float{
+	margin-top:22px;
+}
+
+
+
+
+
+body {
+    font-family: Arial;
+    color: #333;
+    font-size: 0.95em;
+}
+
+.form-head {
+    color: #191919;
+    font-weight: normal;
+    font-weight: 400;
+    margin: 0;
+    text-align: center;    
+    font-size: 1.8em;
+}
+
+.error-message {
+    padding: 7px 10px;
+    background: #fff1f2;
+    border: #ffd5da 1px solid;
+    color: #d6001c;
+    border-radius: 4px;
+    margin: 30px 0px 10px 0px;
+}
+
+.success-message {
+    padding: 7px 10px;
+    background: #cae0c4;
+    border: #c3d0b5 1px solid;
+    color: #027506;
+    border-radius: 4px;
+    margin: 30px 0px 10px 0px;
+}
+
+.demo-table {
+    background: #ffffff;
+    border-spacing: initial;
+    margin: 15px auto;
+    word-break: break-word;
+    table-layout: auto;
+    line-height: 1.8em;
+    color: #333;
+    border-radius: 4px;
+    padding: 20px 40px;
+    width: 380px;
+    border: 1px solid;
+    border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+}
+
+.demo-table .label {
+    color: #888888;
+}
+
+.demo-table .field-column {
+    padding: 15px 0px;
+}
+
+.demo-input-box {
+    padding: 13px;
+    border: #CCC 1px solid;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.btnRegister {
+    padding: 13px;
+    background-color: #5d9cec;
+    color: #f5f7fa;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    border: #5791da 1px solid;
+    font-size: 1.1em;
+}
+
+.response-text {
+    max-width: 380px;
+    font-size: 1.5em;
+    text-align: center;
+    background: #fff3de;
+    padding: 42px;
+    border-radius: 3px;
+    border: #f5e9d4 1px solid;
+    font-family: arial;
+    line-height: 34px;
+    margin: 15px auto;
+}
+
+.terms {
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 930px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+
+
+.hideme
+{
+    opacity:0;
+}
+
+
+
+
+
+
+
+.top {
+  margin: 0;
+  position: relative;
+  width: 100%;
+  background-color: #aaa;
+  height: 300px;
+  opacity: 1;
+  text-align: center;
+  font-family: 'helvetica';
+  font-size: 80px;
+  font-weight: 100;
+  color: #fff;
+}
+
+.title {
+  position: absolute;
+  top: 60%;
+  left: 100px;
+}
+
+
+
+

@@ -1,0 +1,1519 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title> 
+			CoVID Care 
+					
+		</title>
+	
+		<link rel = "icon" href = "drawable/iconfinal.png"> </link>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		 <script>
+            know = {
+                "hello" : "hi",
+                "how are you?" : "good",
+                "ok" : ":)"
+            };
+            function talk() {
+                var user = document.getElementById("userBox").value;
+                document.getElementById("userBox").value = "";
+                document.getElementById("chatLog").innerHTML += user+"<br>";
+                if (user in know) {
+                    document.getElementById("chatLog").innerHTML += know[user]+"<br>";
+                } else {
+                    document.getElementById("chatLog").innerHTML += "I don't understand...<br>";
+                }
+            } 
+        </script>
+		<script src="js/jssor.slider-28.0.0.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+        window.jssor_1_slider_init = function() {
+
+            var jssor_1_SlideshowTransitions = [
+              {$Duration:800,x:-0.3,$During:{$Left:[0.3,0.7]},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:800,x:0.3,$SlideOut:true,$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2}
+            ];
+
+            var jssor_1_options = {
+              $AutoPlay: 1,
+              $SlideshowOptions: {
+                $Class: $JssorSlideshowRunner$,
+                $Transitions: jssor_1_SlideshowTransitions,
+                $TransitionsOrder: 1
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $ThumbnailNavigatorOptions: {
+                $Class: $JssorThumbnailNavigator$,
+                $Orientation: 2,
+                $NoDrag: true
+              }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*#region responsive code begin */
+
+            var MAX_WIDTH = 4000;
+
+            function ScaleSlider() {
+                var containerElement = jssor_1_slider.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+
+                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                    jssor_1_slider.$ScaleWidth(expectedWidth);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            /*#endregion responsive code end*/
+        };
+		
+		
+		
+		
+		
+		
+		
+		
+		 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="form.css" >
+        <script src="form.js"></script>
+		
+		
+		
+    </script>
+	
+	</head>
+	
+	<body >
+	    <script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.js"></script>
+	    
+	    <!--
+<style type="text/css">
+#overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: #000;
+filter:alpha(opacity=70);
+-moz-opacity:0.7;
+-khtml-opacity: 0.7;
+opacity: 0.7;
+z-index: 100;
+display: none;
+}
+.cnt223 a{
+text-decoration: none;
+}
+.popup{
+width: 100%;
+height : 80%;
+margin: 0 auto;
+overflow: auto;
+display: none;
+position: fixed;
+z-index: 101;
+}
+.cnt223{
+min-width: 70%;
+width: 70%;
+min-height: 150px;
+height : 70%;
+margin: 100px auto;
+background: #f3f3f3;
+position: relative;
+z-index: 103;
+overflow: auto;
+padding: 15px 35px;
+border-radius: 5px;
+box-shadow: 0 2px 5px #000;
+}
+.cnt223 p{
+clear: both;
+overflow: auto;
+    color: #555555;
+    /* text-align: justify; */
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.cnt223 p a{
+color: #d91900;
+overflow: auto;
+font-weight: bold;
+}
+.cnt223 .x{
+float: right;
+height: 35px;
+left: 22px;
+position: relative;
+top: -25px;
+overflow: auto;
+width: 34px;
+}
+.cnt223 .x:hover{
+cursor: pointer;
+}
+</style>
+<script type='text/javascript'>
+$(function(){
+var overlay = $('<div id="overlay"></div>');
+overlay.show();
+overlay.appendTo(document.body);
+$('.popup').show();
+$('.close').click(function(){
+$('.popup').hide();
+overlay.appendTo(document.body).remove();
+return false;
+});
+
+
+ 
+
+$('.x').click(function(){
+$('.popup').hide();
+overlay.appendTo(document.body).remove();
+return false;
+});
+});
+</script>
+<div class='popup'style="overflow-y: scroll; " >
+<div class='cnt223' style="overflow-y: scroll;" >
+	<center><h1 style="color:#d91900">Update Notice</h1></center>
+
+<p>
+The new version of <b>CoVID Care android application</b> is availabe. You can Download and Install. As well as the services hosted on the websites have been updated with respected to latest Regulations.
+Stay Home and Stay Safe !
+<br/>
+<br/>
+<b>What's new in CoVID Care Version 3.0.1 :</b>
+<ul>
+	<li>Updated Theme</li>
+	<li>Added features like Metro E-pass and Smart Card Recharge</li>
+	<li>Fixed Bugs and Glitches</li>
+	<li>and many more !</li>
+</ul>
+</p>
+<a href=""class='close'><button class="button" style="margin-top:5px; width:100%"><span>Proceed to the page </span></button></a>
+
+</div>
+</div>
+
+-->
+	
+	<script src="js/jssor.slider-28.0.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.jssor_1_slider_init = function() {
+
+            var jssor_1_SlideshowTransitions = [
+              {$Duration:800,x:-0.3,$During:{$Left:[0.3,0.7]},$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2},
+              {$Duration:800,x:0.3,$SlideOut:true,$Easing:{$Left:$Jease$.$InCubic,$Opacity:$Jease$.$Linear},$Opacity:2}
+            ];
+
+            var jssor_1_options = {
+              $AutoPlay: 1,
+              $SlideshowOptions: {
+                $Class: $JssorSlideshowRunner$,
+                $Transitions: jssor_1_SlideshowTransitions,
+                $TransitionsOrder: 1
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $ThumbnailNavigatorOptions: {
+                $Class: $JssorThumbnailNavigator$,
+                $Orientation: 2,
+                $NoDrag: true
+              }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*#region responsive code begin */
+
+            var MAX_WIDTH = 4000;
+
+            function ScaleSlider() {
+                var containerElement = jssor_1_slider.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+
+                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                    jssor_1_slider.$ScaleWidth(expectedWidth);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            /*#endregion responsive code end*/
+        };
+    </script>
+	
+	<script>
+		document.addEventListener('keydown', function() {
+			if (event.keyCode == 123) {
+				alert("This feature is locked");
+				return false;
+			} else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {
+				alert("This feature is locked");
+				return false;
+			} else if (event.ctrlKey && event.keyCode == 85) {
+				alert("This feature is locked");
+				return false;
+			}
+		}, false);
+
+			if (document.addEventListener) {
+			  document.addEventListener('contextmenu', function(e) {
+				alert("This feature is locked");
+				e.preventDefault();
+			  }, false);
+			} else {
+			  document.attachEvent('oncontextmenu', function() {
+				alert("This feature is locked");
+				window.event.returnValue = false;
+			  });
+			}
+	</script>
+	
+	
+
+		<center>
+			<div class="topnav" id="myTopnav" >
+			
+				 <a href="#home" class="active">হোম</a>
+				 <a href="#govt">সরকার প্রদত্ত সুবিধাদি</a>
+				 <a href="#medical">চিকিৎসাদি</a>
+				 <a href="#regional">আঞ্চলিক সুবিধাদি</a>
+				 <a href="#other">অন্যান্য সুবিধাদি</a>
+				 <a href="#about">আরও জানুন</a>
+				 <a href="https://drive.google.com/file/d/1WVTO0WdkARpovIu8Rj77Tx40wJQ4Reba/view?usp=sharing" download title="Download the official app">
+					<i class="fa fa-download"></i>
+				 </a>
+				 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+					<i class="fa fa-bars"></i>
+				 </a>
+				 
+			  
+			</div>
+			</center>
+			<script>
+				function myFunction() {
+					var x = document.getElementById("myTopnav");
+						if (x.className === "topnav") {
+						x.className += " responsive";
+					} else {
+						x.className = "topnav";
+					}
+				}
+			</script>
+			
+			<script>
+			
+				var prevScrollpos = window.pageYOffset;
+				window.onscroll = function() {
+				  var currentScrollPos = window.pageYOffset;
+				  if (prevScrollpos > currentScrollPos) {
+					document.getElementById("myTopnav").style.top = "0";
+				  } else {
+					document.getElementById("myTopnav").style.top = "-50px";
+				  }
+				  prevScrollpos = currentScrollPos;
+				}
+			
+			</script>
+			
+			
+			
+			
+			<center>
+				<div id="jssor_1" style="position:relative;margin-top:40px;top:0px;left:0px;width:980px;height:300px;overflow:hidden;visibility:hidden;">
+				
+					<!-- Loading Screen -->
+					<div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+						<img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/spin.svg" />
+					</div>
+
+					<div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:300px;overflow:hidden;">
+						<div>
+							<img data-u="image" src="drawable/header.png" />
+							<div u="thumb"> 
+							</div>
+						</div>
+						<div>
+							<img data-u="image" src="drawable/slider2.png" />
+							<div u="thumb"> 
+							</div>
+						</div>
+						<div>
+							<img data-u="image" src="drawable/slider3.jpg" />
+							<div u="thumb"> 
+							</div>
+						</div>
+						<div>
+							<img data-u="image" src="drawable/slider4.png" />
+							<div u="thumb"> 
+							</div>
+						</div>
+            
+            
+					   
+					</div><a data-scale="0" href="https://www.jssor.com" style="display:none;position:absolute;">image gallery</a>
+					<!-- Thumbnail Navigator -->
+					<div u="thumbnavigator" style="position:absolute;bottom:0px;left:0px;width:980px;height:50px;color:#FFF;overflow:hidden;cursor:default;">
+						<div u="slides">
+							<div u="prototype" style="position:absolute;top:0;left:0;width:980px;height:50px;">
+								<div u="thumbnailtemplate" style="position:absolute;top:0;left:0;width:100%;height:100%;font-family:arial,helvetica,verdana;font-weight:normal;line-height:50px;font-size:16px;padding-left:10px;box-sizing:border-box;"></div>
+							</div>
+						</div>
+					</div>
+					<!-- Arrow Navigator -->
+					
+				</div> 
+				<script type="text/javascript">jssor_1_slider_init();
+				</script>
+			</center>
+			
+			<a href="wb.HTML"><button class="button" style="margin-top:5px"><span><b>এই পেজটি ইংরেজি ভাষায় দেখার জন্য এখানে ক্লিক করুন</b></span></button></a>
+			
+		
+		<center>
+			<img src="drawable/headbeng.png" alt="Avatar">
+		</center>
+	
+		
+		<a id='home' name='home'>
+		<iframe src="https://bing.com/covid/local/westbengal_india?setlang=bn" 
+		frameBorder="0"
+		title="CoVID-19 Nation Data : By courtesy of www.covid19india.org" 
+		width= "100%" height="710"></iframe>
+		</a>
+		
+		
+		
+		
+		<center>
+		
+			<h1> প্রয়োজনীয় সার্ভিস  </h1> 
+			<div class="row">
+			
+			<center>
+			<a href="https://indianhelpline.com/Important-Numbers/">
+				<div class="column">
+				
+				
+					<div class="card" >
+						<center>
+						  <img src="drawable/buy.png" alt="Avatar" style="width:50%; height:100%" >
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h5><b>এমার্জেন্সি যোগাযোগ<br>নম্বর</b></h5>
+							</center>
+						  </div>
+					</div>
+				</div>	
+					
+				<a href="https://www.livemint.com/topic/coronavirus">
+				<div class="column">
+					<div class="card" align="center" >
+						<center>
+						  <img src="drawable/news.webp" alt="Avatar" style="width:52%; height:100%">
+						 </center>
+						 </a>
+						 
+						  <div class="container">
+							<center>
+								<h4><b>তাজা<br>খবর</b></h4>
+							</center>
+						  </div>
+						  
+					</div>
+				</div>
+				
+				
+				<a href="https://www.apollo247.com/covid19/scan/">
+				<div class="column">
+					<div class="card" align="right">
+						<center>
+						  <img src="drawable/doctor.png" alt="Avatar" style="width:53%; height:100%">
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h5><b>নিজে পরীক্ষা<br>করুন </b></h5>
+							</center>
+						  </div>
+					</div>
+				</div>
+				
+			
+			</div>	
+			<div class="row">
+			
+			<center>
+			
+			
+			<a href="https://maps.mapmyindia.com/corona?safety_alert">
+				<div class="column">
+				
+					<div class="card" >
+						<center>
+						  <img src="drawable/czone.png" alt="Avatar" style="width:53%; height:100%" >
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h5><b>নিকটবর্তী কন্টেনমেন্ট<br>জোন</b></h5>
+							</center>
+						  </div>
+					</div>
+				</div>	
+				
+			
+			<a href="https://twitter.com/MoHFW_INDIA">		
+				<div class="column">
+					<div class="card" align="center" >
+						<center>
+						  <img src="drawable/twitter.png" alt="Avatar" style="width:77%; height:100%">
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h5><b>MOHFW টুইটার<br>হ্যান্ডেল </b></h5>
+							</center>
+						  </div>
+						  
+					</div>
+				</div>
+			
+				<a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">
+				<div class="column">
+					<div class="card" align="right">
+						<center>
+						  <img src="drawable/who.png" alt="Avatar" style="width:43%; height:100%">
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h4><b>W. H. O. এর<br>নিয়মাবলী</b></h4>
+							</center>
+						  </div>
+					</div>
+				</div>
+			
+			</div>
+			</center>
+		
+		</center>
+	
+		</center>
+		
+		
+		<br>
+		
+		<script>
+		    (window).scroll(function(){
+            (".top").css("opacity", 1 - (window).scrollTop() / 250);
+            });
+
+		</script>
+		
+		<div id='govt'><a name='govt'>
+		    
+	        	<img src="drawable/b.png">
+	        
+		<center> <h1> <strong>সরকার প্রদত্ত সুবিধাদি </strong> </h1> </center>
+		
+			<div class="row">
+			
+			<center>
+			
+				<div class="column">
+				
+				<a href="http://serviceonline.gov.in/epass/">
+					<div class="card" >
+						<center>
+						  <img src="drawable/pass.png" alt="Avatar" style="width:52%; height:100%" >
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h5><b>অনলাইনে যাত্রার<br>ছাড়পত্র বানান </b></h5>
+							</center>
+						  </div>
+					</div>
+				</div>	
+					
+				<a href="https://www.mygov.in/task/join-war-against-covid-19-register-volunteer/">
+				<div class="column">
+					<div class="card" align="center" >
+						<center>
+						  <img src="drawable/volun.png" alt="Avatar" style="width:69%; height:100%">
+						 </center>
+						 </a>
+						 
+						  <div class="container">
+							<center>
+								<h5><b>স্বেচ্ছাসেবক হিসেবে<br>রেজিস্টার করুন </b></h5>
+							</center>
+						  </div>
+						  
+					</div>
+				</div>
+				
+				
+				<a href="https://covid-india.in/">
+				<div class="column">
+					<div class="card" align="right">
+						<center>
+						  <img src="drawable/order.png" alt="Avatar" style="width:40%; height:100%">
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h5><b>সরকারি<br>নির্দেশাবলি</b></h5>
+							</center>
+						  </div>
+					</div>
+				</div>
+				
+			
+			</div>	
+			<div class="row">
+
+            <center>
+			
+				<div class="column">
+				
+				<a href="http://districtpass.covidwbgov.in/districtpass/">
+					<div class="card" >
+						<center>
+						  <img src="drawable/dispass.png" alt="Avatar" style="width:52%; height:100%" >
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h5><b>আন্তঃ জেলা<br>ট্র্যাভেল পাস</b></h5>
+							</center>
+						  </div>
+					</div>
+				</div>	
+					
+				<a href="http://covidwbgov.in/entry/aspx/Signin.aspx">
+				<div class="column">
+					<div class="card" align="center" >
+						<center>
+						  <img src="drawable/entry.png" alt="Avatar" style="width:48%; height:110%">
+						 </center>
+						 </a>
+						 
+						  <div class="container">
+							<center>
+								<h5><b>রাজ্যের বাইরে<br>যাওয়ার ছাড়পত্র</b></h5>
+							</center>
+						  </div>
+						  
+					</div>
+				</div>
+				
+				
+				<a href="http://covidwbgov.in/exit/aspx/Signin.aspx">
+				<div class="column">
+					<div class="card" align="right">
+						<center>
+						  <img src="drawable/exit.png" alt="Avatar" style="width:52%; height:100%">
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h5><b>রাজ্যে প্রবেশের<br>ছাড়পত্র</b></h5>
+							</center>
+						  </div>
+					</div>
+				</div>
+				
+			
+			</div>	
+			
+			<center>
+			
+			
+			<a href="https://www.nhp.gov.in/">
+				<div class="column">
+				
+					<div class="card" >
+						<center>
+						  <img src="drawable/health.png" alt="Avatar" style="width:55%; height:100%" >
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h5><b>স্বাস্থ্য বিভাগের<br>ওয়েবসাইট </b></h5>
+							</center>
+						  </div>
+					</div>
+				</div>	
+				
+			
+			<a href="https://www.ayush.gov.in/">		
+				<div class="column">
+					<div class="card" align="center" >
+						<center>
+						  <img src="drawable/ayush.png" alt="Avatar" style="width:57%; height:100%">
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h5><b>আয়ুষ মন্ত্রকের<br>নিয়মাবলি</b></h5>
+							</center>
+						  </div>
+						  
+					</div>
+				</div>
+			
+				<a href="https://www.nhp.gov.in/state-health-websites_pg">
+				<div class="column">
+					<div class="card" align="right">
+						<center>
+						  <img src="drawable/websites.png" alt="Avatar" style="width:54%; height:100%">
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h5><b>স্বাস্থ্য মন্ত্রকগুলির<br>পোর্টাল </b></h5>
+							</center>
+						  </div>
+					</div>
+				</div>
+			
+			</div>
+			</center>
+		
+		</center>
+		</a>
+			</div>
+
+			</div>
+			
+			
+		
+		<br>
+	
+		<img src="drawable/ba.png" style="margin-top:30px">
+		<center> <h1> <strong>যোগাযোগ ব্যবস্থা </strong> </h1> </center>
+		
+		<div class="row">
+			
+			<center>
+			
+				<div class="column">
+				
+				<a href="https://busindia.com/">
+					<div class="card" >
+						<center>
+						  <img src="drawable/busticket.png" alt="Avatar" style="width:56%; height:100%" >
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h5><b>অনলাইন টিকিট বুকিং  -<br>বাস </b></h5>
+							</center>
+						  </div>
+					</div>
+				</div>	
+					
+				<a href="https://www.makemytrip.com/flights/">
+				<div class="column">
+					<div class="card" align="center" >
+						<center>
+						  <img src="drawable/planeticket.png" alt="Avatar" style="width:63%; height:100%">
+						 </center>
+						 </a>
+						 
+						  <div class="container">
+							<center>
+								<h5><b>অনলাইন টিকিট বুকিং  -<br>বিমান </b></h5>
+							</center>
+						  </div>
+						  
+					</div>
+				</div>
+				
+				
+				<a href="https://www.irctc.co.in/nget/train-search">
+				<div class="column">
+					<div class="card" align="right">
+						<center>
+						  <img src="drawable/train.png" alt="Avatar" style="width:57%; height:100%">
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h5><b>অনলাইন টিকিট বুকিং  -<br>ট্রেন </b></h5>
+							</center>
+						  </div>
+					</div>
+				</div>
+				
+			
+			</div>
+			
+			</center>
+			
+			
+			<center>
+			<div class="row">
+			
+			
+				<center>
+					<div class="column" >
+					
+					<a href="https://pathadisha.com/metro4/">
+						<div class="card" >
+							<center>
+							  <img src="drawable/metropass.png" alt="Avatar" style="width:63%; height:100%" >
+							 </center>
+							 </a>
+							  <div class="container">
+								<center>
+									<h4><b>মেট্রো ই-পাস্ বানান </b></h4>
+								</center>
+							  </div>
+						</div>
+					</div>	
+						
+					<a href="https://mtp.indianrailways.gov.in/KolkataMetroPG/MakePayment.jsp">
+					<div class="column">
+						<div class="card" align="center" >
+							<center>
+							  <img src="drawable/metrorecharge.png" alt="Avatar" style="width:63%; height:100%">
+							 </center>
+							 </a>
+							 
+							  <div class="container">
+								<center>
+									<h4><b>মেট্রো স্মার্ট কার্ড রিচর্জ করুন </b></h4>
+								</center>
+							  </div>
+							  
+						</div>
+					</div>
+					
+				
+				</div>
+			</center>
+					
+			</div>
+		</center>
+		
+		<br>
+		
+		<div id='medical'><a name='medical'>
+		<img src="drawable/bb.png" height="500px">
+		<center> <h1> <strong>চিকিৎসা সুবিধা </strong> </h1> </center>
+		
+			<div class="row">
+			
+			<center>
+			
+				<div class="column">
+				
+				<a href="https://ors.gov.in/copp/frm_mobileNo_registration.jsp?NICSecurityORS=90YQ-QVVV-XKIJ-L59B-FSOT-XBEP-PW1J-0XND&NICSecurityORS=90YQ-QVVV-XKIJ-L59B-FSOT-XBEP-PW1J-0XND">
+					<div class="card" >
+						<center>
+						  <img src="drawable/appoint.png" alt="Avatar" style="width:52%; height:100%" >
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h5><b>চিকিৎসক-হাসপাতালে<br>সাক্ষাৎ-সূচি নিবন্ধিকরন </b></h5>
+							</center>
+						  </div>
+					</div>
+				</div>	
+					
+				<a href="https://drive.google.com/file/d/1w03uVXhehN6cdioeesrYOPyQYHV30mEc/view?usp=sharing">
+				<div class="column">
+					<div class="card" align="center" >
+						<center>
+						  <img src="drawable/conthos.png" alt="Avatar" style="width:52%; height:100%">
+						 </center>
+						 </a>
+						 
+						  <div class="container">
+							<center>
+								<h5><b>হাসপাতালে<br>যোগাযোগ করুন </b></h5>
+							</center>
+						  </div>
+						  
+					</div>
+				</div>
+				
+				
+				<a href="https://maps.mapmyindia.com/corona?corona_treatment_centre">
+				<div class="column">
+					<div class="card" align="right">
+						<center>
+						  <img src="drawable/healthcare.png" alt="Avatar" style="width:50%; height:120%">
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h5><b>নিকটবর্তী স্বাস্থ্য<br>কেন্দ্র </b></h5>
+							</center>
+						  </div>
+					</div>
+				</div>
+				
+			
+			</div>	
+			<div class="row">
+			
+			<center>
+			
+			
+			<a href="https://maps.mapmyindia.com/corona?corona_testing_centre">
+				<div class="column">
+				
+					<div class="card" >
+						<center>
+						  <img src="drawable/lab.png" alt="Avatar" style="width:100%; height:100%" >
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h5><b>নিকটবর্তী<br>পরীক্ষা কেন্দ্র </b></h5>
+							</center>
+						  </div>
+					</div>
+				</div>	
+				
+			
+			<a href="http://wbsapcs.wbhealth.gov.in/readwrite/files/downloads/BloodCenterWB.pdf">		
+				<div class="column">
+					<div class="card" align="center" >
+						<center>
+						  <img src="drawable/blood.png" alt="Avatar" style="width:49%; height:100%">
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h5><b>ব্লাড-ব্যাঙ্কের<br>যোগাযোগ নম্বর</b></h5>
+							</center>
+						  </div>
+						  
+					</div>
+				</div>
+			
+				<a href="https://www.google.com/maps/search/medical+shops+near+me/">
+				<div class="column">
+					<div class="card" align="right">
+						<center>
+						  <img src="drawable/med.png" alt="Avatar" style="width:56%; height:100%">
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h5><b>নিকটবর্তী ওষুধের<br>দোকান</b></h5>
+							</center>
+						  </div>
+					</div>
+				</div>
+			
+			</div>
+			</center>
+		
+		</center>
+		</a>
+			</div>
+
+			</div>
+			
+		
+		<br>
+		
+		<div id='regional'><a name='regional'>
+		<img src="drawable/reg.PNG" >
+		<center> <h1> <strong>আঞ্চলিক সুবিধাদি </strong> </h1> </center>
+		
+			<div class="row">
+			
+			<center>
+			
+				<div class="column">
+				
+				<a href="https://www.google.com/maps/search/food+shelter+near+me/">
+					<div class="card" >
+						<center>
+						  <img src="drawable/fshel.png" alt="Avatar" style="width:100%; height:100%" >
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h5><b>নিকটবর্তী খাদ্য/আশ্রয় কেন্দ্র </b></h5>
+							</center>
+						  </div>
+					</div>
+				</div>	
+					
+				<a href="https://maps.mapmyindia.com/corona?containment_zone_gradient">
+				<div class="column">
+					<div class="card" align="center" >
+						<center>
+						  <img src="drawable/contain.png" alt="Avatar" style="width:60%; height:100%">
+						 </center>
+						 </a>
+						 
+						  <div class="container">
+							<center>
+								<h5><b>ভারতের কন্টেনমেন্ট জোন </b></h5>
+							</center>
+						  </div>
+						  
+					</div>
+				</div>
+				
+				
+				<a href="https://maps.mapmyindia.com/corona?districts_containment_zone">
+				<div class="column">
+					<div class="card" align="right">
+						<center>
+						  <img src="drawable/kz.png" alt="Avatar" style="width:52%; height:100%">
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h5><b>আপনার জেলা সম্পর্কে জানুন </b></h5>
+							</center>
+						  </div>
+					</div>
+				</div>
+				
+			
+			</div>	
+			<div class="row">
+			
+			<center>
+			
+			
+			<a href="https://maps.mapmyindia.com/corona?hunger_and_night_shelter">
+				<div class="column">
+				
+					<div class="card" >
+						<center>
+						  <img src="drawable/night.png" alt="Avatar" style="width:63%; height:100%" >
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h5><b>রাত্রিকালীন আশ্রয় </b></h5>
+							</center>
+						  </div>
+					</div>
+				</div>	
+				
+			
+			<a href="https://www.covidhotspots.in/">		
+				<div class="column">
+					<div class="card" align="center" >
+						<center>
+						  <img src="drawable/hp.png" alt="Avatar" style="width:57%; height:100%">
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h5><b>কোভিড হটস্পট </b></h5>
+							</center>
+						  </div>
+						  
+					</div>
+				</div>
+			
+				<a href="https://www.zomato.com/">
+				<div class="column">
+					<div class="card" align="right">
+						<center>
+						  <img src="drawable/food.png" alt="Avatar" style="width:50%; height:100%">
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h5><b>অনলাইনে খাবার<br>কিনুন </b></h5>
+							</center>
+						  </div>
+					</div>
+				</div>
+			
+			</div>
+			</center>
+			
+			
+		
+		<br>
+	
+		<img src="drawable/elearn.png">
+		<center> <h4> <strong> <b> আপনার মূল্যবান সময় নষ্ট করবেননা , তাকে কাজে লাগান এবং আপনার দক্ষতাকে উন্নত করুন  </b> </strong> </h4> </center>
+		
+		<div class="row">
+			
+			<center>
+			
+				<div class="column">
+				
+				<a href="https://swayam.gov.in/">
+					<div class="card" >
+						<center>
+						  <img src="drawable/sw.png" alt="Avatar" style="width:64%; height:100%" >
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h4><b>Swayam</b></h4>
+							</center>
+						  </div>
+					</div>
+				</div>	
+					
+				<a href="https://nptel.ac.in/">
+				<div class="column">
+					<div class="card" align="center" >
+						<center>
+						  <img src="drawable/np.png" alt="Avatar" style="width:57%; height:100%">
+						 </center>
+						 </a>
+						 
+						  <div class="container">
+							<center>
+								<h4><b>NPTEL</b></h4>
+							</center>
+						  </div>
+						  
+					</div>
+				</div>
+				
+				
+				<a href="https://www.udemy.com/">
+				<div class="column">
+					<div class="card" align="right">
+						<center>
+						  <img src="drawable/udemy.png" alt="Avatar" style="width:74%; height:100%">
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h4><b>Udemy</b></h4>
+							</center>
+						  </div>
+					</div>
+				</div>
+				
+			
+			</div>
+			
+			</center>
+			
+			
+		
+		<br>
+	
+		<img src="drawable/donate.png">
+		<center> <h3> <strong> <b> আপনার অবদান অন্যের জীবনে পরিবর্তন আনতে পারে </b> </strong> </h3> 
+				
+		</center>
+		
+		<div class="row">
+			
+			<center>
+			
+				<div class="column">
+				
+				<a href="https://www.bhimupi.org.in/donation-digitized-with-bhim-upi">
+					<div class="card" >
+						<center>
+						  <img src="drawable/donateupi.png" alt="Avatar" style="width:40%; height:100%" >
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h4><b>রাজ্য তহবিলে<br>দান করুন </b></h4>
+							</center>
+						  </div>
+					</div>
+				</div>	
+					
+				<a href="https://www.feedingindia.org/donate/mealsformigrants">
+				<div class="column">
+					<div class="card" align="center" >
+						<center>
+						  <img src="drawable/food.png" alt="Avatar" style="width:42%; height:100%">
+						 </center>
+						 </a>
+						 
+						  <div class="container">
+							<center>
+								<h4><b>খাদ্য দান <br>করুন </b></h4>
+							</center>
+						  </div>
+						  
+					</div>
+				</div>
+				
+				
+				<a href="https://www.soschildrensvillages.in/donate-now">
+				<div class="column">
+					<div class="card" align="right">
+						<center>
+						  <img src="drawable/kid.png" alt="Avatar" style="width:100%; height:100%">
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h4><b>অনাথদের জন্য<br>দান করুন</b></h4>
+							</center>
+						  </div>
+					</div>
+				</div>
+				
+			
+			</div>
+			
+			</center>
+		
+		
+		<br>
+	
+		<img src="drawable/buying.png">
+		<center> <h3> <strong> <b> Stay At Home, Order Online, Stay Safe ! </b> </strong> </h3> 
+				
+		</center>
+		
+		<div class="row">
+			
+			<center>
+			
+				<div class="column">
+				
+				<a href="https://pharmeasy.in/">
+					<div class="card" >
+						<center>
+						  <img src="drawable/medicine.png" alt="Avatar" style="width:40%; height:100%" >
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h5><b>ওষুধ ক্রয় <br>করুন </b></h5>
+							</center>
+						  </div>
+					</div>
+				</div>	
+					
+				<a href="https://grofers.com/">
+				<div class="column">
+					<div class="card" align="center" >
+						<center>
+						  <img src="drawable/groceries.png" alt="Avatar" style="width:42%; height:100%">
+						 </center>
+						 </a>
+						 
+						  <div class="container">
+							<center>
+								<h5><b>মুদিখানার পণ্যদ্রব্য <br>কিনুন </b></h5>
+							</center>
+						  </div>
+						  
+					</div>
+				</div>
+				
+				
+				<a href="http://www.msmemart.com/">
+				<div class="column">
+					<div class="card" align="right">
+						<center>
+						  <img src="drawable/msme.png" alt="Avatar" style="width:47%; height:100%">
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h5><b>MSME দ্রব্য<br>কিনুন  </b></h5>
+							</center>
+						  </div>
+					</div>
+				</div>
+				
+			
+			</div>
+			
+			</center>	
+		
+	
+		<br>
+		
+		<div id='other'><a name='other'>
+		<img src="drawable/other.PNG" height="500px">
+		<center> <h1> <strong>অন্যান্য সুবিধাদি </strong> </h1> </center>
+		
+			<div class="row">
+			
+			<center>
+			
+				<div class="column">
+				
+				<a href="https://www.youtube.com/results?search_query=home+fitness+">
+					<div class="card" >
+						<center>
+						  <img src="drawable/fitness.png" alt="Avatar" style="width:47%; height:100%" >
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h5><b>বাড়িতে থাকুন<br>সুস্থ্য থাকুন </b></h5>
+							</center>
+						  </div>
+					</div>
+				</div>	
+					
+				<a href="https://docs.google.com/forms/d/e/1FAIpQLSftOELumjPZzn4VtUtuORYrUjLhN0JEe2PkJi9wt1F2IvOKUQ/viewform?usp=sf_link">
+				<div class="column">
+					<div class="card" align="center" >
+						<center>
+						  <img src="drawable/worker.png" alt="Avatar" style="width:48%; height:100%">
+						 </center>
+						 </a>
+						 
+						  <div class="container">
+							<center>
+								<h5><b>অত্যাবশ্যকীয় কর্মী রূপে<br>নাম নথিভুক্ত করুন </b></h5>
+							</center>
+						  </div>
+						  
+					</div>
+				</div>
+				
+				
+				<a href="https://docs.google.com/forms/d/16VzGfh7PekTUgARspo6SZDXwwy4pVOEA0XtGfZYv92E/edit">
+				<div class="column">
+					<div class="card" align="right">
+						<center>
+						  <img src="drawable/hw.png" alt="Avatar" style="width:47%; height:100%">
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h5><b>স্বাস্থ্য কর্মী হিসেবে<br>নাম নথিভুক্ত করুন</b></h5>
+							</center>
+						  </div>
+					</div>
+				</div>
+				
+			
+			</div>	
+			<div class="row">
+			
+			<center>
+			
+			
+			<a href="https://www.thequint.com/news/webqoof">
+				<div class="column">
+				
+					<div class="card" >
+						<center>
+						  <img src="drawable/auth.png" alt="Avatar" style="width:55%; height:100%" >
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h5><b>খবরের সত্যতা<br>যাচাই করুন </b></h5>
+							</center>
+						  </div>
+					</div>
+				</div>	
+				
+			
+			<a href="https://www.mohfw.gov.in/pdf/FAQ.pdf">		
+				<div class="column">
+					<div class="card" align="center" >
+						<center>
+						  <img src="drawable/faq.png" alt="Avatar" style="width:57%; height:100%">
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h5><b>CoVID-19<br>FAQs</b></h5>
+							</center>
+						  </div>
+						  
+					</div>
+				</div>
+			
+				<a href="https://www.cdc.gov/coronavirus/2019-ncov/if-you-are-sick/care-for-someone.html">
+				<div class="column">
+					<div class="card" align="right">
+						<center>
+						  <img src="drawable/ht.png" alt="Avatar" style="width:57%; height:100%">
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h5><b>বাড়িতে <br>চিকিৎসা </b></h5>
+							</center>
+						  </div>
+					</div>
+				</div>
+			
+			</div>
+			</center>
+			
+		
+		<br>
+	
+		<img src="drawable/sm.png">
+		<center> <h1> <strong>সোশ্যাল মিডিয়ার লিঙ্ক </strong> </h1> </center>
+		
+		<div class="row">
+			
+			<center>
+			
+				<div class="column">
+				
+				<a href="https://www.facebook.com/pg/MoHFWIndia/posts/?ref=page_internal">
+					<div class="card" >
+						<center>
+						  <img src="drawable/facebook.png" alt="Avatar" style="width:54%; height:100%" >
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h4><b>MOHFW<br>ফেসবুক</b></h4>
+							</center>
+						  </div>
+					</div>
+				</div>	
+					
+				<a href="https://www.youtube.com/user/mohfwindia">
+				<div class="column">
+					<div class="card" align="center" >
+						<center>
+						  <img src="drawable/yt.png" alt="Avatar" style="width:57%; height:100%">
+						 </center>
+						 </a>
+						 
+						  <div class="container">
+							<center>
+								<h4><b>MOHFW<br>ইউটিউব </b></h4>
+							</center>
+						  </div>
+						  
+					</div>
+				</div>
+				
+				
+				<a href="https://twitter.com/MoHFW_INDIA">
+				<div class="column">
+					<div class="card" align="right">
+						<center>
+						  <img src="drawable/tweeter.png" alt="Avatar" style="width:57%; height:100%">
+						 </center>
+						 </a>
+						  <div class="container">
+							<center>
+								<h4><b>MOHFW<br>টুইটার </b></h4>
+							</center>
+						  </div>
+					</div>
+				</div>
+				
+			
+			</div>
+			
+			</center>
+			
+			
+		
+		</center>
+		
+		
+		
+	
+	
+	<br>
+	
+	
+	<div id='about'><a name='about'>
+		
+	<center>
+		<img src="drawable/name.PNG" alt="Avatar" style="width:100%; height:100%; margin:0px" >
+	</center>
+	<center>
+			<img src="drawable/footone.PNG" alt="Avatar" style="margin-top:-5px">
+	</center>
+	</div>
+	
+	<center><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSctJ6iqFg6CI51ZjbNg3_sTKc_8uZuglK81dRHeAQ00sye1AA/viewform?usp=sf_link" 
+		frameBorder="0"
+		title="Feedback" 
+		width= "100%" height="510" style="margin-left:-50px;margin-right:-50px;"></iframe>
+	</center>
+	<center>
+			<img src="drawable/foot.png" alt="Avatar">
+	</center>
+	
+	
+	<center>
+		<footer> <h6>&copy; Copyright 2020. Soumyadip Chattopadhyay, Department of Computer Science, Bangabasi College. University of Calcutta</h6> </footer> 
+	</center>
+	
+	
+	
+	
+	
+	<a href="form/formpage.html" title="Contact Us" class="float" id="myBtn">
+		<center>
+			<i class="fa fa-phone my-float" title="Contact Us"></i>
+		</center>
+		
+	</a>
+<div style="background-color: #eeeeee">
+	<center>
+	    <br>
+	    <p> You are visitor number </p>
+	    <div style="height:50px;width:90px">
+		    <a href="https://www.hitwebcounter.com" target="_blank">
+                <img src="https://hitwebcounter.com/counter/counter.php?page=7648559&style=0019&nbdigits=5&type=page&initCount=559" title="Web Counter" Alt="counter free"   border="0" >
+            </a>                                       
+		</div>	
+		</center>
+		</div>
+
+	</body>
+</html>
